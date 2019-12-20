@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/header_fragment.html">
+
+
+<body>
+<div class="container">
+    <h1>Sesje</h1>
+    <table class="table  table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Tytuł
+            </th>
+            <th>
+                Czy aktywna
+            </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <th:block th:each="academicSession: ${academicSessions}">
+            <tr>
+                <td >
+                <a th:href="|@{/admin/editor/}${academicSession.id}|" th:text="${academicSession.id}"></a>
+                </td>
+                <td th:text="${academicSession.name}">
+
+                </td>
+                <td th:text="${academicSession.isActive}">
+
+                </td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

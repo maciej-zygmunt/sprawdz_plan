@@ -1,0 +1,85 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div id="content">
+
+    <div id="plans">
+
+        <h2 style="text-align: center; color: #5a5a5a" th:text="${academicArea.name}">Nazwa Kierunku</h2>
+
+        <p id="cont">Harmonogram zostanie opublikowany najpóźniej 24 września 2019r. Plan może ulec zmianie.</p>
+
+        <p id="cont">Po zalogowaniu w serwisie <a id="links" href="https://plan.agh.edu.pl" target="_blank">https://plan.agh.edu.pl</a>
+            i wybraniu "search/wyszukaj" mają Państwo dostęp do swojego indywidualnego harmonogramu. Identyfikator to nr
+            albumu, a hasło można ustanowić / odzyskać na stronie <a id="links" href="https://ldap.agh.edu.pl/"
+                                                                     target="_blank">https://ldap.agh.edu.pl/</a>. Żeby
+            przenieść terminy zajęć do elektronicznych kalendarzy najlepiej posłużyć się iCalendar URL (przesłany na
+            Państwa maile plik .ics z indywidualnym harmonogramem nie będzie uwzględniał dodatkowych terminów zajęć,
+            zaliczeń i egzaminów). Wskazówki dot. importu znajdują się <a id="links" th:href="@{/public/ical}"
+                                                                          href="ical.html">tutaj</a>.</p>
+
+        <p id="cont">Proszę zwrócić uwagi, że na niektórych przedmiotach możecie być Państwo przypisani do innej grupy
+            niż na pozostałych. Wynika to z nowego sposobu układania harmonogramu przedmiotów obieralnych i z próby
+            budowania harmonogramu bez okienek. Od dnia 27 września do odwołania będzie możliwość zmiany grupy
+            ćwiczeniowej, ale tylko wtedy, gdy nie powoduje to kolizji terminów i gdy limit grupy na to pozwala.</p>
+
+
+        <div>
+
+            <th:block th:each="academicLevelDto, info: ${academicLevelDtoList}">
+<!--                One academicLevel
+-->
+                <div class="-content" th:id="'myContent+{$info.index}'" id="myTabContent">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin: 30px">
+                        <!--/*@thymesVar id="academicLevelDtoList" type="List<AcademicLevelDto>"*/-->
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" th:href="'#home'+${info.index}" href="#home" role="tab"
+                               aria-controls="home" aria-selected="true" style="color: #8C1717"
+                               th:text="|${info.index+1} STOPEŃ|"><b>1 STOPIEŃ</b></a>
+                        </li>
+                        <th:block th:each="year, yearInfo: ${academicLevelDto.years}">
+                            <li class="nav-item">
+                                <!--                            th:href="|#rok${year}${info.index}|"-->
+                                <a class="nav-link" th:id="'t'+${info.index}+'-tab'" id="jeden-tab"
+                                   th:href="|#rok${year}${info.index}|" data-toggle="tab" href="#jeden"
+                                   role="tab"
+                                   aria-controls="profile" aria-selected="false" style="color: #003399"
+                                   th:text="|${year} rok|">1 rok E-1</a>
+                            </li>
+                        </th:block>
+                    </ul>
+                </div>
+                <!--                th:attr="value=#{subscribe.submit}"-->
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" th:id="'home'+${info.index}" id="home"  role="tabpanel" aria-labelledby="home-tab"
+                         style="margin: 30px"></div>
+                    <!--/*@thymesVar id="academicLevelDto" type="pl.coderslab.timetable.dto.AcademicLevelDto"*/-->
+                    <th:block th:each="year, yearInfo: ${academicLevelDto.years}">
+                        <div class="tab-pane fade" th:id="|rok${year}${info.index}|" id="jeden" role="tabpanel"
+                             aria-labelledby="jeden-tab" style="margin: 30px">
+                            <th:block th:each="major: ${academicLevelDto.academicLevel.majors}">
+
+                                <!--/*@thymesVar id="major" type="pl.coderslab.timetable.model.Major"*/-->
+                                <p>
+                                <a id="links"
+                                   th:href="|https://plan.agh.edu.pl/UniTime/gwt.jsp?page=timetable#events=&name=${major.name}+S1&term=Semestr+zimowy2019AGH&type=curriculum|"
+                                   href="https://plan.agh.edu.pl/UniTime/gwt.jsp?page=timetable#events=&name=EiP-E-1+${academicLevelDto.semesters.get(info.index)}&term=Semestr+zimowy2019AGH&type=curriculum"
+                                   target="_blank"
+                                   th:text="|Plan zajęć dla  ${yearInfo.index+1} roku  ${academicLevelDto.semesters.get(info.index)} semestru  ${info.index+1} stopnia ${major.description}|"
+                                >
+                                    Plan zajęć dla 1 roku 1 stopnia</a>
+                                </p>
+                            </th:block>
+                        </div>
+                    </th:block>
+
+                </div>
+            </th:block>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+</html>

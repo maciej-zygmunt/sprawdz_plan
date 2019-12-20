@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSONedtr - jQuery powered JSON editor</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script th:src="@{/js/JSONedtr.js}" src="../static/js/JSONedtr.js"></script>
+    <link rel="stylesheet" type="text/css"  th:href="@{/style/JSONedtr.css}" href="../static/style/JSONedtr.css">
+	<script th:src="@{/js/editor.js}" src="../static/js/editor.js" type="text/javascript"></script>
+    <script>
+
+    </script>
+    <style>
+        #help {
+            margin: 50px 50px 0px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="help">
+    <p>Click the <u><b>✚</b></u> sign to add a row.</p>
+    <p>Click the <u><b>✖</b></u> sign to delete a row.</p>
+    <p>Click any <u><b>key</b></u> or <u><i>value</i></u> to edit it.</p>
+    <p>See source of this file (Ctrl+u) for code.</p>
+</div>
+<div id="input-form">
+    <input th:attr="value=${sessionId}" id="session_id" type="text">
+    <button id="load">Load</button>
+    <button id="save">Save</button>
+</div>
+<div id="output"></div>
+
+</body>
+</html>
