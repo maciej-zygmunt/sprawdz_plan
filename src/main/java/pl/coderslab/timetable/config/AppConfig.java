@@ -62,16 +62,16 @@ public class AppConfig  implements ApplicationContextAware {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.any())
+                .paths(PathSelectors.ant("/admin/session/**"))
                 .build();
     }
-    @Bean
-    public AcademicSession academicSession() {
-        AcademicSession academicSession=AcademicSession.builder().isActive(true).isWinter(false)
-                .unitimeName("Semestr zimowy2019")
-                .name("Semestr zimowy").build();
-        return academicSession;
-    }
+//    @Bean
+//    public AcademicSession academicSession() {
+//        AcademicSession academicSession=AcademicSession.builder().isActive(true).isWinter(false)
+//                .unitimeName("Semestr zimowy2019")
+//                .name("Semestr zimowy").build();
+//        return academicSession;
+//    }
     @Bean
     public WebMvcConfigurer corsConfigurer()
     {

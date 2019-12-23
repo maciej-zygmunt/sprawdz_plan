@@ -14,7 +14,23 @@ public class AcademicLevelDto {
     private final AcademicSession academicSession;
     private final AcademicArea academicArea;
     private final AcademicLevel academicLevel;
-    public  List<String> getYears() {
+    private List<String> years;
+    private List<String> semesters;
+
+    public AcademicLevelDto(AcademicSession academicSession, AcademicArea academicArea, AcademicLevel academicLevel) {
+        this.academicSession = academicSession;
+        this.academicArea = academicArea;
+        this.academicLevel = academicLevel;
+        years=initYears();
+        semesters=initSemesters();
+    }
+    public String semester(Integer i) {
+        if(i>=0 && i<semesters.size()) {
+            return semesters.get(i);
+        }
+        return "s"+i;
+    }
+    private  List<String> initYears() {
         boolean isWinter=academicSession.getIsWinter();
         int numberOfSemesters=academicLevel.getNumberOfSemesters();
         boolean isWinterEntry=academicLevel.getIsWinterEntry();
@@ -29,7 +45,7 @@ public class AcademicLevelDto {
         }
         return years;
     }
-    public List<String> getSemesters() {
+    private List<String> initSemesters() {
         boolean isWinter=academicSession.getIsWinter();
         int numberOfSemesters=academicLevel.getNumberOfSemesters();
         boolean isWinterEntry=academicLevel.getIsWinterEntry();
@@ -38,8 +54,8 @@ public class AcademicLevelDto {
         if (! isWinter && isWinterEntry) {
             start=2;
         }
-        for (int i = start; i <=numberOfSemesters ; i=+2) {
-            semeters.add("s"+i);
+        for (int i = start; i <=numberOfSemesters ; i+=2) {
+            semeters.add("S"+i);
         }
         return semeters;
     }

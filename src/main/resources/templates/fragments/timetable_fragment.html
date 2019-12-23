@@ -24,11 +24,12 @@
 
 
         <div>
+            <!--/*@thymesVar id="academicLevelDtoList" type="List<pl.coderslab.timetable.dto.AcademicLevelDto>"*/-->
 
             <th:block th:each="academicLevelDto, info: ${academicLevelDtoList}">
 <!--                One academicLevel
 -->
-                <div class="-content" th:id="'myContent+{$info.index}'" id="myTabContent">
+                <div class="tab-content" th:id="'myContent+{$info.index}'" id="myTabContent">
                     <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin: 30px">
                         <!--/*@thymesVar id="academicLevelDtoList" type="List<AcademicLevelDto>"*/-->
                         <li class="nav-item">
@@ -50,33 +51,34 @@
                 </div>
                 <!--                th:attr="value=#{subscribe.submit}"-->
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" th:id="'home'+${info.index}" id="home"  role="tabpanel" aria-labelledby="home-tab"
+                    <div class="tab-pane fade show active" th:id="|home${info.index}|" id="home" role="tabpanel" aria-labelledby="home-tab"
                          style="margin: 30px"></div>
-                    <!--/*@thymesVar id="academicLevelDto" type="pl.coderslab.timetable.dto.AcademicLevelDto"*/-->
                     <th:block th:each="year, yearInfo: ${academicLevelDto.years}">
                         <div class="tab-pane fade" th:id="|rok${year}${info.index}|" id="jeden" role="tabpanel"
                              aria-labelledby="jeden-tab" style="margin: 30px">
+                            <!--/*@thymesVar id="academicLevel" type="pl.coderslab.timetable.dto.AcademicLevelDto"*/-->
                             <th:block th:each="major: ${academicLevelDto.academicLevel.majors}">
 
                                 <!--/*@thymesVar id="major" type="pl.coderslab.timetable.model.Major"*/-->
                                 <p>
                                 <a id="links"
-                                   th:href="|https://plan.agh.edu.pl/UniTime/gwt.jsp?page=timetable#events=&name=${major.name}+S1&term=Semestr+zimowy2019AGH&type=curriculum|"
-                                   href="https://plan.agh.edu.pl/UniTime/gwt.jsp?page=timetable#events=&name=EiP-E-1+${academicLevelDto.semesters.get(info.index)}&term=Semestr+zimowy2019AGH&type=curriculum"
+                                   th:href="|https://plan.agh.edu.pl/UniTime/gwt.jsp?page=timetable#events=&name=${major.name}+${academicLevelDto.semester(yearInfo.index)}&term=Semestr+zimowy2019AGH&type=curriculum|"
+                                   href="https://plan.agh.edu.pl/UniTime/gwt.jsp?page=timetable#events=&name=EiP-E-1+S1&term=Semestr+zimowy2019AGH&type=curriculum"
                                    target="_blank"
-                                   th:text="|Plan zajęć dla  ${yearInfo.index+1} roku  ${academicLevelDto.semesters.get(info.index)} semestru  ${info.index+1} stopnia ${major.description}|"
-                                >
+                                   th:text="|Plan zajęć dla  ${yearInfo.index+1} roku  ${academicLevelDto.semester(yearInfo.index)} semestru  ${info.index+1} stopnia ${major.description}|">
                                     Plan zajęć dla 1 roku 1 stopnia</a>
                                 </p>
                             </th:block>
                         </div>
-                    </th:block>
 
+                    </th:block>
                 </div>
             </th:block>
 
-        </div>
 
+
+            </div>
+        </div>
 
 
     </div>

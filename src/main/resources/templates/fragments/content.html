@@ -1,3 +1,4 @@
+<html xmlns:th="http://www.thymeleaf.org">
 <div id="plans">
 
     <h2 style="text-align: center; color: #5a5a5a">Witamy w systemie planowania zajęć AGH!</h2>
@@ -15,11 +16,15 @@
         studentów zapisanych na prowadzone przez Państwa zajęcia - proszę
         kliknąć w zakładkę Tutoriale -&gt; Dla pracowników.</p>
 
-    <p id="cont">Wskazówki dot. importu terminów zajęć do elektronicznych kalendarzy znajdują się w zakładce <a href="http://sprawdz.plan.agh.edu.pl/ical.html" target="_self">Tutoriale - &gt; iCalendar</a>.</p>
+    <p id="cont">Wskazówki dot. importu terminów zajęć do elektronicznych kalendarzy znajdują się w zakładce <a
+            th:href="@{/public/ical}" href="http://sprawdz.plan.agh.edu.pl/ical.html" target="_self">Tutoriale - &gt;
+        iCalendar</a>.</p>
 
     <p id="cont">Rezerwacje sal - w zakładce link do rezerwacji sal. Wskazówki dot. zakładania rezerwacji znajdują
-        się z zakładkach <a href="http://sprawdz.plan.agh.edu.pl/staff_rez.html" target="_self">Tutoriale -&gt; Dla
-            pracowników -&gt; Rezerwacje sal</a> lub <a href="http://sprawdz.plan.agh.edu.pl/staff_rez_alt.html" target="_self">Tutoriale -&gt; Dla pracowników -&gt;
+        się z zakładkach <a th:href="@{/public/staff_rez}" href="http://sprawdz.plan.agh.edu.pl/staff_rez.html"
+                            target="_self">Tutoriale -&gt; Dla
+            pracowników -&gt; Rezerwacje sal</a> lub <a href="http://sprawdz.plan.agh.edu.pl/staff_rez_alt.html"
+                                                        target="_self">Tutoriale -&gt; Dla pracowników -&gt;
             Rezerwacje sal sposób alternatywny</a>.</p>
 
     <p id="cont" style="color: #5a5a5a">DLA STUDENTA:</p>
@@ -34,7 +39,8 @@
         odzyskać na stronie <a href="https://ldap.agh.edu.pl/" target="_blank">https://ldap.agh.edu.pl/</a>.
         Żeby przenieść terminy zajęć do elektronicznych kalendarzy najlepiej
         posłużyć się iCalendar URL, wskazówki jak to zrobić, znajdują się w
-        zakładce <a href="http://sprawdz.plan.agh.edu.pl/ical.html" target="_self">Tutoriale - &gt; iCalendar</a>.
+        zakładce <a th:href="@{/public/ical}" href="http://sprawdz.plan.agh.edu.pl/ical.html" target="_self">Tutoriale -
+            &gt; iCalendar</a>.
     </p>
 
     <p id="cont">Jeśli będą Państwo potrzebować
