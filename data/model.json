@@ -1,0 +1,585 @@
+{
+    "name": "Semestr Letni 2020",
+    "unitimeName": "Semestr Letni2020",
+    "isWinter": true,
+    "isActive": true,
+    "deparements": [
+        {
+            "statutoryOrder": 4,
+            "name": "Wydział Energetyki i Paliw",
+            "shortName": "WEiP",
+            "utName": "EiP",
+            "academicAreas": [
+                {
+                    "name": "Energetyka",
+                    "shortName": "E",
+                    "academicLevels": [
+                        {
+                            "level": 2,
+                            "isWinterEntry": true,
+                            "numberOfSemesters": 3,
+                            "majors": [
+                                {
+                                    "name": "EiP-E-2-COiK",
+                                    "description": "Ciepłownictwo, ogrzewnictwo i klimatyzacja"
+                                },
+                                {
+                                    "name": "EiP-E-2-EJ",
+                                    "description": "Energetyka jądrowa"
+                                },
+                                {
+                                    "name": "EiP-E-2-MKwE",
+                                    "description": "Modelowanie komputerowe w energetyce"
+                                },
+                                {
+                                    "name": "EiP-E-2-SMiKEdE",
+                                    "description": "Systemy magazynowania i konwersji energii dla e-mobility"
+                                },
+                                {
+                                    "name": "EiP-E-2-SMiUE",
+                                    "description": "Systemy, maszyny i urządzenia energetyczne"
+                                },
+                                {
+                                    "name": "EiP-E-2-USiSE",
+                                    "description": "Urządzenia, sieci i systemy elektroenergetyczne"
+                                }
+                            ]
+                        },
+                        {
+                            "level": 1,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 7,
+                            "majors": [
+                                {
+                                    "name": "EiP-E-1",
+                                    "description": "Energetyka"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Energetyka Odnawialna i Zarządzanie Energią",
+                    "shortName": "EOiZE",
+                    "academicLevels": [
+                        {
+                            "level": 2,
+                            "isWinterEntry": true,
+                            "numberOfSemesters": 3,
+                            "majors": [
+                                {
+                                    "name": "EiP-EO-2-EPiZE",
+                                    "description": "Ekonomika, polityka i zarządzanie energią"
+                                },
+                                {
+                                    "name": "EiP-EO-2-TEO",
+                                    "description": "Technologie energetyki odnawialnej"
+                                }
+                            ]
+                        },
+                        {
+                            "level": 1,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 7,
+                            "majors": [
+                                {
+                                    "name": "EiP-EO-1",
+                                    "description": "Energetyka Odnawialna i Zarządzanie Energią"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Technologia Chemiczna",
+                    "shortName": "TC",
+                    "academicLevels": [
+                        {
+                            "level": 2,
+                            "isWinterEntry": true,
+                            "numberOfSemesters": 3,
+                            "majors": [
+                                {
+                                    "name": "EiP-TC-2-APiŚ",
+                                    "description": "Analityka przemysłowa i środowiskowa"
+                                },
+                                {
+                                    "name": "EiP-TC-2-CFaAFE",
+                                    "description": "Clean Fossil and Alternative Fuels Energy"
+                                },
+                                {
+                                    "name": "EiP-TC-2-PPIiTC",
+                                    "description": "Proekologiczne procesy inżynierii i technologii chemicznej"
+                                },
+                                {
+                                    "name": "EiP-TC-2-TP",
+                                    "description": "Technologia paliw"
+                                },
+                                {
+                                    "name": "EiP-TC-2-TCwE",
+                                    "description": "Technologie chemiczne w energetyce"
+                                }
+                            ]
+                        },
+                        {
+                            "level": 1,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 7,
+                            "majors": [
+                                {
+                                    "name": "EiP-TC-1",
+                                    "description": "Technologia Chemiczna"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "statutoryOrder": 5,
+            "name": "Wydział Fizyki i Informatyki Stosowanej",
+            "shortName": "WFiIS",
+            "utName": "FiIS",
+            "academicAreas": [
+                {
+                    "name": "Biofizyka",
+                    "shortName": "B",
+                    "academicLevels": [
+                        {
+                            "level": 3,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 7,
+                            "majors": [
+                                {
+                                    "name": "FiIS-Dokt [B]",
+                                    "description": "Biofizyka"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Fizyka",
+                    "shortName": "F",
+                    "academicLevels": [
+                        {
+                            "level": 3,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 7,
+                            "majors": [
+                                {
+                                    "name": "FiIS-Dokt [F]",
+                                    "description": "Fizyka"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Fizyka Medyczna",
+                    "shortName": "FM",
+                    "academicLevels": [
+                        {
+                            "level": 2,
+                            "isWinterEntry": true,
+                            "numberOfSemesters": 3,
+                            "majors": [
+                                {
+                                    "name": "FiIS-FM-2-DIE",
+                                    "description": "Dozymetria i elektronika w medycynie"
+                                },
+                                {
+                                    "name": "FiIS-FM-2-TOB",
+                                    "description": "Techniki obrazowania i biometria"
+                                }
+                            ]
+                        },
+                        {
+                            "level": 1,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 7,
+                            "majors": [
+                                {
+                                    "name": "FiIS-FM-1",
+                                    "description": "Fizyka Medyczna"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Fizyka Techniczna",
+                    "shortName": "FT",
+                    "academicLevels": [
+                        {
+                            "level": 2,
+                            "isWinterEntry": true,
+                            "numberOfSemesters": 3,
+                            "majors": [
+                                {
+                                    "name": "FiIS-FT-2",
+                                    "description": "Fizyka Techniczna"
+                                }
+                            ]
+                        },
+                        {
+                            "level": 1,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 7,
+                            "majors": [
+                                {
+                                    "name": "FiIS-FT-1",
+                                    "description": "Fizyka Techniczna"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Informatyka Stosowana",
+                    "shortName": "IS",
+                    "academicLevels": [
+                        {
+                            "level": 2,
+                            "isWinterEntry": true,
+                            "numberOfSemesters": 3,
+                            "majors": [
+                                {
+                                    "name": "FiIS-IS-2-GKPO",
+                                    "description": "Grafika komputerowa i przetwarzanie obrazów"
+                                },
+                                {
+                                    "name": "FiIS-IS-2-MAD",
+                                    "description": "Modelowanie i analiza danych"
+                                },
+                                {
+                                    "name": "FiIS-IS-2-SWiR",
+                                    "description": "Systemy wbudowane i rekonfigurowalne"
+                                }
+                            ]
+                        },
+                        {
+                            "level": 1,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 7,
+                            "majors": [
+                                {
+                                    "name": "FiIS-IS-1",
+                                    "description": "Informatyka Stosowana"
+                                }
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "isWinterEntry": true,
+                            "numberOfSemesters": 10,
+                            "majors": [
+                                {
+                                    "name": "FiIS-IS-2-MAD",
+                                    "description": "Informatyka Stosowana"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "statutoryOrder": 1,
+            "name": "Wydział Geodezji Górniczej i Inżynierii Środowiska",
+            "shortName": "WGGiIŚ",
+            "utName": "GGiIŚ",
+            "academicAreas": [
+                {
+                    "name": "Geodezja i Kartografia",
+                    "shortName": "GiK",
+                    "academicLevels": [
+                        {
+                            "level": 2,
+                            "isWinterEntry": true,
+                            "numberOfSemesters": 3,
+                            "majors": [
+                                {
+                                    "name": "GGiIŚ-GiK-2-GIP",
+                                    "description": "Geodezja inżynieryjno-przemysłowa"
+                                },
+                                {
+                                    "name": "GGiIŚ-GiK-2-GiG",
+                                    "description": "Geoinformacja i geodezja górnicza"
+                                },
+                                {
+                                    "name": "GGiIŚ-GiK-2-GFiT",
+                                    "description": "Geoinformatyka, fotogrametria i teledetekcja"
+                                },
+                                {
+                                    "name": "GGiIŚ-GiK-2-Geo",
+                                    "description": "Geomatyka"
+                                },
+                                {
+                                    "name": "GGiIŚ-GiK-2-GNiK",
+                                    "description": "Gospodarka nieruchomościami i kataster"
+                                }
+                            ]
+                        },
+                        {
+                            "level": 1,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 7,
+                            "majors": [
+                                {
+                                    "name": "GGiIŚ-GiK-1",
+                                    "description": "Geodezja i Kartografia"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Geoinformacja",
+                    "shortName": "G",
+                    "academicLevels": [
+                        {
+                            "level": 1,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 7,
+                            "majors": [
+                                {
+                                    "name": "GGiIŚ-GIN-1",
+                                    "description": "Geoinformacja"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Inżynieria Środowiska",
+                    "shortName": "IŚ",
+                    "academicLevels": [
+                        {
+                            "level": 2,
+                            "isWinterEntry": true,
+                            "numberOfSemesters": 3,
+                            "majors": [
+                                {
+                                    "name": "GGiIŚ-IŚ-2-GN",
+                                    "description": "Gospodarka niskoemisyjna"
+                                },
+                                {
+                                    "name": "GGiIŚ-IŚ-2-IK",
+                                    "description": "Inżynieria komunalna"
+                                },
+                                {
+                                    "name": "GGiIŚ-IŚ-2-IW",
+                                    "description": "Inżynieria wodna"
+                                },
+                                {
+                                    "name": "GGiIŚ-IŚ-2-SZŚ",
+                                    "description": "Systemowe Zarządzanie Środowiskiem"
+                                },
+                                {
+                                    "name": "GGiIŚ-IŚ-2-SiTOŚ",
+                                    "description": "Systemy i Techniki Ochrony Środowiska"
+                                },
+                                {
+                                    "name": "GGiIŚ-IŚ-2-SIiŚ",
+                                    "description": "Systemy informacji o środowisku"
+                                }
+                            ]
+                        },
+                        {
+                            "level": 1,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 7,
+                            "majors": [
+                                {
+                                    "name": "GGiIŚ-IŚ-1",
+                                    "description": "Inżynieria Środowiska"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "statutoryOrder": 3,
+            "name": "Wydział Human1yczny",
+            "shortName": "WH",
+            "utName": "H",
+            "academicAreas": [
+                {
+                    "name": "Informatyka Społeczna",
+                    "shortName": "IS",
+                    "academicLevels": [
+                        {
+                            "level": 1,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 6,
+                            "majors": [
+                                {
+                                    "name": "H-IS-1",
+                                    "description": "Informatyka Społeczna"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Kulturoznawstwo",
+                    "shortName": "K",
+                    "academicLevels": [
+                        {
+                            "level": 2,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 4,
+                            "majors": [
+                                {
+                                    "name": "H-K-2-TiIwPK",
+                                    "description": "Technologie i innowacje w promocji kultury"
+                                }
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 4,
+                            "majors": [
+                                {
+                                    "name": "H-K-2-KWiPG",
+                                    "description": "Komunikacja wizualna i projektowanie graficzne"
+                                },
+                                {
+                                    "name": "H-K-2-KWiPG",
+                                    "description": "Kultura nowych mediów"
+                                },
+                                {
+                                    "name": "H-K-2-KWiPG",
+                                    "description": "Projektowanie graficzne w kulturze nowych mediów"
+                                }
+                            ]
+                        },
+                        {
+                            "level": 1,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 6,
+                            "majors": [
+                                {
+                                    "name": "H-K-1",
+                                    "description": "Kulturoznawstwo"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Socjologia",
+                    "shortName": "S",
+                    "academicLevels": [
+                        {
+                            "level": 2,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 4,
+                            "majors": [
+                                {
+                                    "name": "H-S-2-EG",
+                                    "description": "E-gospodarka"
+                                },
+                                {
+                                    "name": "H-S-2-IiIS",
+                                    "description": "Innowacje i interwencje społeczne"
+                                },
+                                {
+                                    "name": "H-S-2-EG",
+                                    "description": "Multimedia i komunikacja społeczna"
+                                }
+                            ]
+                        },
+                        {
+                            "level": 1,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 6,
+                            "majors": [
+                                {
+                                    "name": "H-S-1",
+                                    "description": "Socjologia"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "statutoryOrder": 2,
+            "name": "Wydział Matematyki Stosowanej",
+            "shortName": "WMS",
+            "utName": "MS",
+            "academicAreas": [
+                {
+                    "name": "Matematyka",
+                    "shortName": "M",
+                    "academicLevels": [
+                        {
+                            "level": 3,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 6,
+                            "majors": [
+                                {
+                                    "name": "MS-M-DOKT",
+                                    "description": "Matematyka"
+                                }
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 4,
+                            "majors": [
+                                {
+                                    "name": "MS-M-2",
+                                    "description": "Matematyka"
+                                },
+                                {
+                                    "name": "MS-M-2-MF",
+                                    "description": "Matematyka finansowa"
+                                },
+                                {
+                                    "name": "MS-M-2-MOK",
+                                    "description": "Matematyka obliczeniowa i komputerowa"
+                                },
+                                {
+                                    "name": "MS-M-2-MU",
+                                    "description": "Matematyka ubezpieczeniowa"
+                                },
+                                {
+                                    "name": "MS-M-2-MI",
+                                    "description": "Matematyka w informatyce"
+                                },
+                                {
+                                    "name": "MS-M-2-MNTP",
+                                    "description": "Matematyka w naukach technicznych i przyrodniczych"
+                                },
+                                {
+                                    "name": "MS-M-2-MZ",
+                                    "description": "Matematyka w zarządzaniu"
+                                }
+                            ]
+                        },
+                        {
+                            "level": 1,
+                            "isWinterEntry": false,
+                            "numberOfSemesters": 6,
+                            "majors": [
+                                {
+                                    "name": "MS-M-1",
+                                    "description": "Matematyka"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

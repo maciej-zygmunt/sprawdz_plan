@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -19,8 +20,8 @@ public class AcademicLevel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String level;
-    private Boolean isWinterEntry;
+    private Short level;
+    private Boolean isWinterEntry=false;
     private Short numberOfSemesters;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)

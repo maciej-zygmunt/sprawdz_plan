@@ -71,8 +71,9 @@ public class AppConfig  implements ApplicationContextAware {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedMethods("GET", "PUT", "POST", "DELETE",
-                        "PATCH", "OPTIONS", "HEAD");
+//                registry.addMapping("/**").allowedMethods("GET", "PUT", "POST", "DELETE",
+//                        "PATCH", "OPTIONS", "HEAD");
+                registry.addMapping("/**").allowedOrigins("*");
             }
         };
     }

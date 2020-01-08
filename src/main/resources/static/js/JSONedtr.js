@@ -60,7 +60,7 @@ function JSONedtr( data, outputElement, config = {} ){
 				//console.log ($(this) )
 				let r1=JSONedtr.getData( $( selector ))
 				if(Object.keys(r1)[0]==0) {
-					console.log(Object.values(r1))
+					// console.log(Object.values(r1))
 					result[ $(this).val( ) ] = Object.values(r1);
 				} else {
 				//console.log([1,2,3])

@@ -29,8 +29,8 @@ public class AcademicSessionController {
                 Major.builder().name("EiP-E-2-EJ").description("Energetyka jądrowa").build()
         );
         List<AcademicLevel> academicLevels=Arrays.asList(
-                AcademicLevel.builder().level("Ist").isWinterEntry(false).numberOfSemesters((short) 7).majors(majors1).build(),
-                AcademicLevel.builder().level("IIst").isWinterEntry(true).numberOfSemesters((short) 3).majors(majors2).build()
+                AcademicLevel.builder().level((short)1).isWinterEntry(false).numberOfSemesters((short) 7).majors(majors1).build(),
+                AcademicLevel.builder().level((short)2).isWinterEntry(true).numberOfSemesters((short) 3).majors(majors2).build()
         );
         List<AcademicArea> academicAreas = Arrays.asList(
         AcademicArea.builder().name("Energetyka")

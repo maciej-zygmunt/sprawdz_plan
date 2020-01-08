@@ -16,8 +16,10 @@ import pl.coderslab.timetable.model.AcademicSession;
 import pl.coderslab.timetable.model.Department;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping(path = "/public/timetable")
@@ -36,7 +38,8 @@ public class AcademicAreaController {
         AcademicArea academicArea = academicAreaDao.fndByShortNames( deptShortName, areaShortName);
         Optional<AcademicSession> academicSession = academicSessionDao.getActiveAcademicSession();
         List<AcademicLevelDto> academicLevelDtoList =new ArrayList<>();
-        for (AcademicLevel academicLevel: academicArea.getAcademicLevels()) {
+        List<AcademicLevel> academicLevelsSorted=academicArea.getAcademicLevels().stream().sorted(Comparator.comparing(AcademicLevel::getLevel)).collect(Collectors.toList());
+        for (AcademicLevel academicLevel: academicLevelsSorted) {
             academicLevelDtoList.add(new AcademicLevelDto(academicSession.get(),academicArea,academicLevel));
         }
         model.addAttribute("academicLevelDtoList", academicLevelDtoList);

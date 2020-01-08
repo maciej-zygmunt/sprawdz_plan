@@ -9,10 +9,12 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin( maxAge = 3600)
 @RequestMapping(path="/admin/session")
 public class AcademicSessionAdminController {
     @Autowired
     AcademicSessionDao academicSessionDao;
+    @CrossOrigin
     @RequestMapping(method = RequestMethod.GET, path = "{id}")
     public AcademicSession get(@PathVariable Long id) {
         AcademicSession academicSession=academicSessionDao.findById(id).get();
