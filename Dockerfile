@@ -10,4 +10,4 @@ RUN mvn install -DskipTests
 FROM openjdk:8-jre-alpine
 WORKDIR /app
 COPY --from=build /app/target/sprawdz-plan-0.0.1-SNAPSHOT.jar /app
-CMD ["java -jar sprawdz-plan-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","sprawdz-plan-0.0.1-SNAPSHOT.jar"]
